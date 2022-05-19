@@ -1,0 +1,35 @@
+%==============================================================================
+\documentclass[10pt]{article}
+% ==============================================================================
+
+% ++++++++++++++++++++++++++++++++++++++++++++++++
+\newcommand{\raiz}{../../../Laboratorios}
+\usepackage{\raiz/tex/preambulo, \raiz/tex/definiciones}
+\newcommand{\home}{\raiz/CP1}
+% ++++++++++++++++++++++++++++++++++++++++++++++++
+
+% ################################################
+\def\sesion{1}
+\def\doctitle{Sesión \sesion}
+\def\theauthor{Laboratorio}
+\def\course{\textsc{Cálculo de Probabilidades I}}
+\def\topictitle{Espacios de Probabilidad}
+\def\period{\today}
+% ################################################
+
+% ==============================================================================
+\begin{document}
+% ==============================================================================
+
+\setcounter{section}{0}
+\input{\home/lab01/lab01Texto}
+
+% -----------------------------------------
+\addcontentsline{toc}{section}{Referencias}
+\bibliography{\raiz/ref/probabilidad}
+\bibliographystyle{chicago}
+% -----------------------------------------
+
+% ==============================================================================
+\end{document}
+% ==============================================================================
