@@ -1,0 +1,245 @@
+%===============================================================================|
+%2345678901234567890123456789012345678901234567890123456789012345678901234567890
+%###############################################################################
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+%<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+%2345678901234567890123456789012345678901234567890123456789012345678901234567890
+%===============================================================================|
+
+%===============================================================================|
+\usepackage{color}
+%%%%%%%%%%%%%%% BiBTeX %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Commands applied to Chicago style
+\newcommand{\citeY}[1]{\citeyear{#1}}
+\newcommand{\citeYNP}[1]{\citeyearNP{#1}}
+\newcommand{\citeAY}[1]{\citeANP{#1} \citeyear{#1}}
+\newcommand{\citeAYnote}[2]{\citeANP{#1} (\citeyearNP{#1}, #2)}
+\newcommand{\citeMAY}[2]{\citeANP{#1} \citeyear{#1,#2}}
+\newcommand{\shortciteAY}[1]{\shortciteANP{#1} \citeyear{#1}}
+\newcommand{\shortciteMAY}[2]{\shortciteANP{#1} \citeyear{#1,#2}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%% - ebz's %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\AIC}{\ensuremath{\text{AIC}}}
+\newcommand{\ANOVA}{\ensuremath{\textsc{anova}}}
+\newcommand{\anova}{\ensuremath{\textsc{anova}}}
+\newcommand{\BHH}{\textsf{BHH}}
+\newcommand{\BHHe}{\textsf{BHH2e}}
+\newcommand{\bs}[1]{\ensuremath{\boldsymbol{#1}}}
+\newcommand{\bfpuntos}[1]{\ensuremath{[\bs{#1}{\text{\bf\ puntos}]}}}
+\newcommand{\CM}[1]{\ensuremath{\text{CM}_\text{#1}}}
+\newcommand{\Comunidad}{\textsl{Comunidad ITAM}}
+\newcommand{\Corolario}[1]{\bigskip\noindent{{\bf Corolario} {\bs{#1}}\ }}
+\newcommand{\corr}{\ensuremath{\text{corr}}}
+\newcommand{\Corr}{\ensuremath{\text{Corr}}}
+\newcommand{\cov}{\ensuremath{\text{cov}}}
+%\newcommand{\Cov}{\ensuremath{\text{Cov}}}
+\newcommand{\cuadrito}{\raisebox{-1.0ex}{\hspace{1.0em}$\Box$}}
+\newcommand{\cv}{\ensuremath{\text{cv}}}
+\renewcommand{\d}[1]{\ensuremath{\operatorname{d}\!{#1}}} % for differnetial, derivatives
+\newcommand{\Definicion}[1]{\bigskip\noindent{{\bf Definici\'{o}n} {\bs{#1}}\ }}
+\newcommand{\Def}[1]{\textbf{#1}} % Ver settigs-itam.sty
+\newcommand{\Dem}{\noindent\textsl{Demostraci\'{o}n}}
+\newcommand{\demostracion}{\vspace{-1ex}\noindent\textsl{Demostraci\'{o}n}}
+\newcommand{\Demostracion}{\medskip\noindent\textsl{Demostraci\'{o}n}}
+\newcommand{\de}{\ensuremath{\text{de}}}
+\newcommand{\ci}{{i\mkern1mu}}
+\newcommand{\dist}{\ensuremath{\sim}}
+\newcommand{\distapprox}{\ensuremath{\stackrel{\cdot}{\sim}}}
+\newcommand{\diag}{\ensuremath{\text{diag}}}
+\newcommand{\df}[1]{\ensuremath{\text{df}_\text{#1}}}
+\newcommand{\e}{\ensuremath{\textrm{e}}}
+\newcommand{\ebz}{\textsl{-ebz}}
+\newcommand{\ecm}{\ensuremath{\textsc{ecm}}}
+\newcommand{\error}{\ensuremath{\epsilon}}
+\newcommand{\ee}{\ensuremath{\text{ee}}}
+\newcommand{\eg}{\ensuremath{\text{e.g.}}}
+\newcommand{\emm}{\ensuremath{\textsc{emm}}}
+\newcommand{\emv}{\ensuremath{\textsc{emv}}}
+\newcommand{\Event}[2]{\ensuremath{#1 = \{\textnormal{#2}\} }}
+\newcommand{\event}[1]{\ensuremath{\left\{ #1 \right\}}}
+\newcommand{\evento}[1]{\ensuremath{\left\{\textnormal{#1} \right\}}}
+\newcommand{\EA}{\ensuremath{\textsl{EA}}}
+\newcommand{\EM}{\ensuremath{\textsl{EM}}}  % Espacio Muestral
+\newcommand{\EMC}{\ensuremath{\textsc{EMC}}}
+\newcommand{\EMCO}{\ensuremath{\textsc{EMCO}}}
+\newcommand{\EMM}{\ensuremath{\textsc{EMM}}}
+\newcommand{\EMV}{\ensuremath{\textsc{EMV}}}
+%\newcommand{\Ejemplo}{\bigskip\noindent \textsl{Ejemplo}}
+%\newcommand{\Ejemplo}{\bigskip\noindent \textbf{Ejemplo}}
+%\newcommand{\Ejercicio}{\bigskip\noindent \textbf{Ejercicio}}
+%\newcommand{\Example}{\noindent\textsl{Example}}
+\newcommand{\Ejemplo}[1]{\bigskip\noindent{{\bf Ejemplo}\ {\bs{#1}}\ }}
+\newcommand{\Ejercicio}[1]{\bigskip\noindent{{\bf Ejercicio}\ {\bs{#1}}\ }}
+%\newcommand{\Event}[2]{\ensuremath{#1 = \{\text{#2}\} }}
+\newcommand{\Ga}{\ensuremath{\text{Ga}}}
+\newcommand{\gl}[1]{\ensuremath{\text{g.l.}_\text{#1}}}
+\newcommand{\Hint}{\textsl{Sugerencia}}
+\newcommand{\Ho}{\ensuremath{\text{H}_0}}
+\newcommand{\Ha}{\ensuremath{\text{H}_\text{a}}}
+%\newcommand{\Ind}[1]{\ensuremath{\mathbb{I}_{#1}}}
+\newcommand{\Ind}[1]{\ensuremath{\mathbbm{1}_{#1}}}  %%% uses bbm package
+\newcommand{\ind}{\ensuremath{\textrm{ind}}}  %%% uses dsfont package
+\newcommand{\ie}{\ensuremath{\text{i.e.}}}
+\newcommand{\iid}{\ensuremath{\textit{i.i.d.}}}
+\newcommand{\ma}{\ensuremath{\textsl{m. a.}}}
+\newcommand{\MCG}{\ensuremath{\text{MCG}}}
+\newcommand{\MCO}{\ensuremath{\text{MCO}}}
+\newcommand{\MLG}{\ensuremath{\textrm{MLG}}}
+\newcommand{\MCP}{\ensuremath{\text{MCP}}}
+\newcommand{\MS}[1]{\ensuremath{\text{MS}_\text{#1}}}
+\newcommand{\Integers}{\mathbb{Z}} % package amsfonts required
+\newcommand{\mediana}{\mathop{\text{mediana}}}
+\newcommand{\mybullet}{\textcolor{black}{$\bullet$}} %% Requiere paquete "color"
+\newcommand{\mystar}{\textcolor{black}{$\star$}} %% Requiere paquete "color"
+\newcommand{\myP}{\raisebox{-1.0ex}{\hspace{1.0ex}\P}}
+\newcommand{\Naturals}{\mathbb{N}} % package amsfonts required
+\newcommand{\No}{\mathbb{N}_0} % package amsfonts required
+\newcommand{\Note}{\textsl{Note}}
+%\newcommand{\Nota}{\textsl{Nota}}
+%\newcommand{\No}{\mathbb{N}_0} % package amsfonts required
+\newcommand{\Nota}{\bigskip\noindent\textbf{Nota}}
+\newcommand{\Notas}{\bigskip\noindent\textbf{Notas}}
+\newcommand{\of}{\ensuremath{\text{otra forma}}}
+\renewcommand{\Pr}{\ensuremath{\mathbb{P}}}     % Require del paquete amsfonts
+\newcommand{\Prob}[1]{\ensuremath{\mathbb{P}\left( #1 \right) }}
+\newcommand{\Problema}[1]{\bigskip\noindent{{\bf Problema\ {\bs{#1}}}}}
+\newcommand{\Prop}{\textsl{Propiedades}}
+\newcommand{\Proposicion}[1]{\bigskip\noindent{{\bf Proposici\'{o}n}\ {\bs{#1}}\ }}
+\newcommand{\Propiedades}[1]{\bigskip\noindent{{\bf Propiedades}\ {\bs{#1}}\ }}
+\newcommand{\pvalue}{\ensuremath{p\text{-value}}}
+\newcommand{\pts}[1]{\ensuremath{[#1]}}
+\newcommand{\puntos}[1]{\ensuremath{[#1\text{ puntos}]}}
+\newcommand{\myR}{\textsf{R}}
+\newcommand{\R}{\textsf{R}}
+\newcommand{\Reals}{\mathbb{R}} % package amsfonts required
+%\newcommand{\R+}{\ensuremath{\mathbb{R}^+}}
+\newcommand{\rango}{\ensuremath{\text{rango}}}
+\newcommand{\resid}{\ensuremath{\hat{r}}}
+\newcommand{\res}{\ensuremath{\hat{\epsilon}}}
+%\newcommand{\Ref}[1]{\textcolor{blue}{\footnote{\color{blue}\reallarge#1}}}
+\newcommand{\round}[1]{\ensuremath{[\![#1]\!]}}
+\newcommand{\Solucion}{\medskip\noindent\textsl{Soluci\'{o}n}}
+\newcommand{\SC}[1]{\ensuremath{\text{SC}_\text{#1}}}
+\newcommand{\SCE}{\ensuremath{\text{SCE}}}
+\newcommand{\SCR}{\ensuremath{\text{SCR}}}
+\newcommand{\SCT}[1]{\ensuremath{\text{SCT}_\text{#1}}}
+\newcommand{\SN}[1]{\ensuremath{\text{SN}\text{#1}}}
+\newcommand{\Sol}{
+\noindent\textsl{Sol}}
+\newcommand{\soporte}[1]{\ensuremath{\mathcal{S}_\text{#1}}}
+\newcommand{\SSq}[1]{\ensuremath{\text{SS}_\text{#1}}}
+\newcommand{\stdev}{\ensuremath{\text{stdev}}}
+\newcommand{\sd}{\ensuremath{\text{de}}}
+\newcommand{\se}{\ensuremath{\text{se}}}
+\newcommand{\Teorema}[1]{\bigskip\noindent{{\textbf{Teorema}}\ {\textbf{#1}}\ }}
+\newcommand{\tr}{\ensuremath{^\textsc{T}}}
+\newcommand{\traza}{\ensuremath{\text{tr}}}
+\newcommand{\valorp}{\ensuremath{\text{valor-}p}}
+\newcommand{\var}{\ensuremath{\text{var}}}
+\newcommand{\vartot}{\ensuremath{\text{vartot}}}
+\newcommand{\vs}{\ensuremath{\textit{vs.}}}
+\newcommand{\y}{\ensuremath{\text{y}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%% Probabilidad en Sistemas Fisicos y Procesos Aleatorios %%%%%%%%%
+\newcommand{\average}[1]{\ensuremath{\langle #1 \rangle}}
+\newcommand{\Ber}{\ensuremath{\textrm{Ber}}}
+\newcommand{\Bernoulli}{\ensuremath{\textrm{Ber}}}
+\newcommand{\Bin}{\ensuremath{\textrm{Bin}}}
+\newcommand{\Binomial}{\ensuremath{\textrm{Bin}}}
+\newcommand{\BinNeg}{\ensuremath{\textrm{BinNeg}}}
+\newcommand{\BN}{\ensuremath{\textrm{BN}}}
+\newcommand{\Cauchy}{\ensuremath{\textrm{Cauchy}}}
+\newcommand{\Cov}[2]{\ensuremath{\textrm{cov}\left( #1,#2 \right) }} 
+\newcommand{\DCM}{\ensuremath{\textrm{DCM}}}
+%\newcommand{\ECM}{\ensuremath{\textrm{ECM}}}
+\newcommand{\DExp}{\ensuremath{\textrm{DExp}}}
+\newcommand{\DobleExponencial}{\ensuremath{\textrm{DExp}}}
+\newcommand{\E}{\ensuremath{\mathbb{E}}}    % Requiere del paquete amsfonts
+\newcommand{\Erlang}{\ensuremath{\textrm{Erlang}}}
+\newcommand{\EP}{\textsl{EP}}
+\newcommand{\Esp}[1]{\ensuremath{\mathbb{E}\left[ #1 \right] }} 
+\newcommand{\Exp}{\ensuremath{\textrm{Exp}}}
+\newcommand{\Exponencial}{\ensuremath{\textrm{Exp}}}
+\newcommand{\Gama}{\ensuremath{\textrm{Gamma}}}
+\newcommand{\Geometrica}{\ensuremath{\textrm{Geom}}}
+\newcommand{\HGeom}{\ensuremath{\textrm{HGeom}}}
+\newcommand{\Hipergeometrica}{\ensuremath{\textrm{HGeom}}}
+\newcommand{\Laplace}{\ensuremath{\textrm{DExp}}}
+\newcommand{\Multinomial}{\ensuremath{\text{Multinomial}}}
+\newcommand{\nCr}{\ensuremath{_n\textnormal{C}_r}}
+\newcommand{\nOr}{\ensuremath{_n\textnormal{O}_r}}
+\newcommand{\nPr}{\ensuremath{_n\textnormal{P}_r}}
+\newcommand{\Normal}{\textrm{N}}
+%\newcommand{\PP}{\ensuremath{\textrm{P}}}
+\newcommand{\pa}{\ensuremath{\textsl{p. a.}}}
+\newcommand{\pe}{\ensuremath{\textsl{p. e.}}}
+\newcommand{\Pareto}{\ensuremath{\textnormal{Pareto}}}
+\newcommand{\Poisson}{\ensuremath{\text{Po}}}
+\newcommand{\Uniforme}{\ensuremath{\text{unif}}}
+\newcommand{\fc}{\textsl{f. c.}}
+%\newcommand{\fda}{\textsl{f. d. a.}}
+\newcommand{\fdp}{\textsl{f. d. p.}}
+\newcommand{\fgp}{\textsl{f. g. p.}}
+\newcommand{\fgm}{\textsl{f. g. m.}}
+\newcommand{\fmp}{\textsl{f. m. p.}}
+\newcommand{\fp}{\textsl{f. p.}}
+\newcommand{\fpa}{\textsl{f. p. a.}}
+\newcommand{\LEI}{\textsl{LEI}}
+\newcommand{\LeonGarcia}{Le\'{o}n-Garc\'{i}a (1994)}
+\newcommand{\lognormal}{\ensuremath{\textrm{Lognormal}}}
+\newcommand{\Lognormal}{\ensuremath{\textrm{Lognormal}}}
+\newcommand{\SNR}[1]{\ensuremath{\text{SNR}\text{#1}}}
+\newcommand{\snr}[1]{\ensuremath{\textsc{snr}\text{#1}}}
+%\newcommand{\soporte}[1]{\ensuremath{\mathcal{S}_{#1}}}
+\newcommand{\va}{\textsl{v. a.}}
+\newcommand{\vad}{\textsl{v. a. d.}}
+\newcommand{\vac}{\textsl{v. a. c.}}
+\newcommand{\vaiid}{\textsl{v.a.i.i.d.}}
+\newcommand{\TCL}{\textnormal{TCL}}
+\newcommand{\TPT}{\textnormal{TPT}}
+\newcommand{\TEI}{\textnormal{TEI}}
+\newcommand{\Var}[1]{\ensuremath{\textrm{var}\left( #1 \right) }} 
+\newcommand{\Weibull}{\textrm{Weibull}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%\newtheorem{Ejemplo}{\textup{Ejemplo}}
+%%%\newtheorem{Definicion}{\textup{Definici\'{o}n}}
+
+\newenvironment{mymath}[1]{#1\color{black}\[}{\]\color{blue}}
+\newenvironment{Mymath}[2]{#1\color{#2}\[}{\]\color{blue}}
+
+
+\newenvironment{myarray}[1]{#1\color{black}\begin{eqnarray*}}{\end{eqnarray*}\color{blue}}
+
+\newenvironment{myOptions}[2]{
+    \begin{description}
+    \newcommand{\sep}{\hspace{#1}}
+    \item[] \centerline{#2}\vspace{-1em}
+    \end{description}
+%\medskip
+}
+
+\newsavebox{\savepar}
+\newenvironment{Boxit}[1]
+%    {\begin{lrbox}{\savepar}\begin{minipage}[t]{8in}}
+%    {\begin{lrbox}{\savepar}\begin{minipage}[t]{6.5in}}
+    {\begin{lrbox}{\savepar}\begin{minipage}[t]{#1}}
+    {\end{minipage}\end{lrbox}\fbox{\usebox{\savepar}}}
+
+\newenvironment{Display}
+    {\begin{center}\begin{Boxit}}
+    {\end{Boxit}\end{center}}
+
+%%%%%% Modifica los simbolos utilizados en itemize
+%\input{\home/TeX/spanish.cfg} %%% No es necesario si no se usa Babel
+%%%%\renewcommand{\theenumiii}{\roman{enumiii}}
+
+\newcommand{\myReference}[1]{
+\rule[-.5mm]{95mm}{.1mm} \\ %[-1em]
+\vspace{-5mm}\small#1}
+%===============================================================================|
