@@ -1,0 +1,54 @@
+\usepackage{amsmath,amssymb,amsfonts,latexsym,epsfig}
+\usepackage{commath}
+\usepackage{dsfont}  %%% used for indicactor function \mathds{1}
+\usepackage{bbm}  %%% used for indicactor function \mathbbm{1}
+\usepackage{float}
+\usepackage[makeroom]{cancel}  %%% used to strikeout expressions. Check tex/Paquetes subdirectory for examples
+%\usepackage{natbib}
+%\usepackage{enumitem}
+\usepackage{chicago}
+\usepackage[spanish, mexico]{babel}
+%\usepackage[spanish, activeacute]{babel}
+%\spanishdecimal{.}
+
+\usepackage[latin1]{inputenc}
+\usepackage{hyperref}
+\hypersetup{colorlinks, linkcolor=black, pdftex}
+
+%%% ========================================================================
+\usepackage{geometry}
+\setlength{\topmargin}{-5em} %
+\setlength{\headsep}{25pt} %
+\setlength{\footskip}{25pt} %
+%\setlength{\textheight}{9.75in} %
+%\setlength{\textwidth}{6.5in} %
+\setlength{\textheight}{9.50in} %
+\setlength{\textwidth}{5.5in} %
+\setlength{\hoffset}{+15pt}
+%%% ========================================================================
+
+\setlength{\parskip}{1ex}
+\renewcommand{\baselinestretch}{1.1}
+
+% ========================================================================
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand\headrulewidth{.1pt}
+\fancyhf{} %delete the current section for header and footer
+\fancyhead[L]{\footnotesize\sffamily \doctitle \hfill \topictitle \hfill
+\thepage}
+\renewcommand\footrulewidth{.1pt}
+\fancyfoot[c]{} \fancyfoot[R]{\footnotesize\sffamily \theauthor \hfill
+\course \hfill \period}
+% ========================================================================
+
+% ========================================================================
+% Necesario en los ejercicios, tanto individuales como todo el cuaderno
+% \renewcommand{\theenumi}{\thesection:\arabic{enumi}} 
+% ========================================================================
+
+\def\theauthor{Laboratorio}
+%\def\course{\textsc{}}
+%\def\period{Oto�o 2020}
+%\def\period{\today}
+%\def\version{0.1}

@@ -1,0 +1,89 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2.00cm, right=2.00cm]{geometry}
+\usepackage[spanish]{babel}
+\usepackage{geometry}
+\usepackage{url}
+\usepackage{enumerate}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{bbm}
+\usepackage{dsfont}
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{xcolor, colortbl}
+\usepackage{lscape}
+\usepackage{array, multirow, multicol}
+\spanishdecimal{.}
+
+\definecolor{skyblue6}{rgb}{.2, .6, .8}
+\definecolor{gris claro}{gray}{0.95}
+
+\title{Cálculo de Probabilidades I \\
+	\large Laboratorio 2\\ Instituto Tecnológico Autónomo de México}
+
+\author{David Isaac López Romero}
+\date{\today}
+\begin{document}
+	
+	\maketitle
+	
+	\section{Medida de probabilidad}
+	
+	\begin{enumerate}
+		
+		\item Sean $\mathbb{P}_1, \dots, \mathbb{P}_n$ medidas de probabilidad sobre $(\Omega, \mathcal{F})$ y $\alpha_1,\dots,\alpha_n$ números no negativos tales que $\sum_{i=1}^{n} \alpha_i = 1$. Demuestre que la combinación convexa
+		\[
+		\mathbb{P} = \sum_{i=1}^{n} \alpha_i \mathbb{P}_i
+		\]
+		es una medida de probabilidad.
+		
+		\item Supongamos que tenemos dos dados honestos. Resuelva los siguientes incisos:
+		\begin{enumerate}
+			\item Calcule la probabilidad de que la suma del resultado de ambos dados sea igual a ocho.
+			\item Obtenga la probabilidad de que el resultado del primer dado sea menor al resultado del segundo.
+			\item Calcule la probabilidad de que al menos sale un '6'.
+		\end{enumerate} 
+		
+		\item Sean $A,B$ y $C$ tres eventos en el espacio muestral $\Omega$. Suponga que
+		\begin{itemize}
+			\item $A \cup B \cup C = \Omega$.
+			\item $\mathbb{P}(A) = \frac{1}{2}$.
+			\item $\mathbb{P}(B) = \frac{2}{3}$.
+			\item $\mathbb{P}(A \cup B) = \frac{5}{6}$.
+		\end{itemize}
+		Resuelva los siguientes incisos:
+		\begin{enumerate}
+			\item Calcule $\mathbb{P}(A \cap B)$.
+			\item ¿$A,B$ y $C$ forman una partición de $\Omega$?
+			\item Encuentre $\mathbb{P}(C - (A \cup B))$.
+			\item Si $\mathbb{P}(C \cap (A \cup B)) = \frac{5}{12}$, halle $\mathbb{P}(C)$.
+		\end{enumerate}
+	
+		\item Se escoge un número $a$ al azar dentro del intervalo $(-1,1)$ ¿Cuál es la probabilidad de que la ecuación cuadrática $ax^2 + x + 1 = 0$ tenga dos raíces reales?
+		
+		\item Un modelo de una ruleta puede construirse tomando un espacio de probabilidad uniforme sobre una circunferencia de radio $1$, de manera que la probabilidad de que el apuntador caiga en una arco de longitud $s$ es $s/2\pi$. Suponga que el círculo se divide en 37 zonas numeradas $1, 2, . . . , 37$. Calcule la probabilidad de que la ruleta caiga en una zona par.
+		
+		\item Suponga que un experimento se realiza n veces. Para cualquier evento $E$ del espacio muestral, sea $n(E)$ el número de veces que $E$ ocurre, y defina $f(E) = n(E)/n$. Muestre que $f$ es una medida de probabilidad. (Es decir, satisface los Axiomas de la Probabilidad.)
+		
+		\item \textbf{Desigualdad de Bonferroni:}
+		Sean $E$ y $F$ conjuntos arbitrarios en un espacio de probabilidad. Pruebe que
+		\[
+		\mathbb{P}(E \cap F) \ge \mathbb{P}(E) + \mathbb{P}(F) - 1
+		\]
+		Asimismo, verifique que si $\mathbb{P}(E) = 0.9$ y $\mathbb{P}(F) = 0.8$, entonces $P(E \cap F ) \ge 0.7.$  
+		
+		\item Un estudio sobre el número de sismos mayores a 5 grados en escala Richter que ocurren al año en la Ciudad de México demuestra que la probabilidad de tener $x+1$ sismos en un año es $\frac{1}{3}$ de la probabilidad de tener $x$ sismos en un año. ¿Cuál es la probabilidad de que en un año ocurran dos o más sismos?
+		
+		
+		
+	\end{enumerate}
+	
+\end{document}

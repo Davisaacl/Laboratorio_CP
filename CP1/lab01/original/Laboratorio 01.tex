@@ -1,0 +1,135 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2.00cm, right=2.00cm]{geometry}
+\usepackage[spanish]{babel}
+\usepackage{geometry}
+\usepackage{url}
+\usepackage{enumerate}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{bbm}
+\usepackage{dsfont}
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{xcolor, colortbl}
+\usepackage{lscape}
+\usepackage{array, multirow, multicol}
+\spanishdecimal{.}
+
+\definecolor{skyblue6}{rgb}{.2, .6, .8}
+\definecolor{gris claro}{gray}{0.95}
+
+\title{Cálculo de Probabilidades I \\
+	\large Laboratorio 1\\ Instituto Tecnológico Autónomo de México}
+
+\author{David Isaac López Romero}
+\date{\today}
+\begin{document}
+
+\maketitle
+
+\section{Introducción}
+
+\begin{enumerate}
+	\item \textbf{Una integral importante:} Esta integral se relaciona con la distribución Gamma que se ve al final del curso.\\
+	Para $r \in \mathbb{Z}^{+}$ y $\lambda>0$ pruebe que
+	\[
+	\int_{0}^{+\infty} x^{r} e^{-\lambda x} \,dx = \dfrac{r!}{\lambda^{r+1}}
+	\]
+	
+	\item Pruebe para $0<p<1$ y $A>0$ 
+	\[
+	\sum_{x=j}^{\infty} Ap^x = \dfrac{A p^j}{1-p}
+	\]
+	
+	\item Pruebe que para $0<p<1$ se cumple que
+	\[
+	\sum_{x=0}^{\infty} xp^x= \dfrac{p}{(1-p)^2}
+	\]
+	
+	\item Sean $A$ y $B$ subconjuntos de $\Omega$. Demuestre que
+	\[
+	A \subseteq B \Longleftrightarrow B^c \subseteq A^c
+	\]
+	
+	\item Demuestre que si $A$ y $B$ son conjuntos, entonces
+	\[
+	\mathcal{P}(A \cap B) = \mathcal{P}(A) \cap \mathcal{P}(B)
+	\]
+	
+	
+	\item Demuestre las leyes (o fórmulas) de De Morgan. Si $\{ A_i | i \in I\}$ es una colección arbitraria de subconjuntos de $\Omega$, entonces
+	\begin{enumerate}
+		\item $\Big( \bigcup_{i} A_i \Big)^c = \bigcap_{i} A_i^c$
+		\item $\Big( \bigcap_{i} A_i \Big)^c = \bigcup_{i} A_i^c$
+	\end{enumerate}
+
+
+	\item Demuestre que si $\mathcal{F}$ es una $\sigma$-álgebra de subconjuntos de $\Omega$ si, y solo si, se satisfacen las siguientes propiedades:
+	\begin{enumerate}
+		\item $\emptyset \in \mathcal{F}$ 
+		\item $A \in \mathcal{F} \Longrightarrow A^{c} \in \mathcal{F}$
+		\item $(A_n)_{n=1}^{+\infty} \in \mathcal{F} \Longrightarrow \bigcap\limits_{n=1}^{\infty} A_n \in \mathcal{F}$
+	\end{enumerate}
+	
+	
+	
+	
+	\item Pruebe que el conjunto potencia de $\Omega \not= \emptyset$ arbitrario es una $\sigma$-álgebra.
+	
+	\item Sea $\Omega = \{a,b,c,d\}$ y sean $A=\{a,b\}$ y $B = \{b,c\}$. Defina la familia $\mathcal{A} = \{A,B\}$. Determine si $\mathcal{A}$ es $\sigma$-álgebra. Encuentre la mínima $\sigma$-álgebra que contiene a $\mathcal{A}$, que se define por:
+	
+	\[
+	\sigma\{\mathcal{A}\} = \bigcap_i \{ \mathcal{F}_i | \mathcal{F}_i \supset \mathcal{A} \}
+	\]
+	
+	\item Sean $\mathcal{F}_i$ para $i=1,\dots,n$ una colección de $\sigma$- algebras. Defina a 
+	\[
+	\mathcal{F} = \bigcap_{i=1}^{n} \mathcal{F}_i
+	\]
+	Pruebe que $\mathcal{F}$ es $\sigma$-álgebra.
+	
+	(\textbf{Observación:} La prueba en versión infinita es análoga.)
+	
+	\item Sean $\mathcal{F}_1$ y $\mathcal{F}_2$ dos $\sigma$- álgebras de subconjuntos de $\Omega$. Pruebe que $\mathcal{F}_1 \cup \mathcal{F}_2$ no necesariamente es una $\sigma$-algebra. Para ello considere el espacio $\Omega = \{1,2,3\}$ y las $\sigma$-álgebras $\mathcal{F}_1 = \{ \emptyset, \{1\}, \{2,3\}, \Omega\}$ y $\mathcal{F}_2 = \{ \emptyset, \{1,2\}, \{3\}, \Omega\}$.
+	
+	
+	\item Sea $\mathcal{F}$ una $\sigma$-álgebra de subconjuntos de $\Omega$. Pruebe que la colección $\mathcal{F}^C = \{ A^c | A \in \mathcal{F}\}$ es una $\sigma$-álgebra. Compruebe que $\mathcal{F}^C$ y $\mathcal{F}$ coinciden.
+	
+	
+	
+	\item (*Opcional:) Sean $\Omega$ y $\Omega'$ conjuntos arbitrarios y $f:\Omega \rightarrow \Omega'$ una función. Si $B \subset \Omega'$, la imagen inversa de $B$ con respecto a $f$ será 
+	\[
+	f^{-1}(B) = \{ \omega \in \Omega | f(\omega ) \in B\}
+	\]
+	Si $\mathcal{C}$ es una familia de subconjuntos $\Omega'$, entonces
+	\[
+	f^{-1} (\mathcal{C}) = \{ f^{-1} (B) | B \in \mathcal{C}\}
+	\]
+	Demuestre:
+	
+	\begin{enumerate}
+		\item $f^{-1}(\Omega') = \Omega$.
+		\item Si $B$ y $C$ son subconjuntos de $\Omega'$ entonces $f^{-1}(C-B)=f^{-1}(C)-f^{-1}(B)$. En particular, $f^{-1}(B^{c}) = [f^{-1}(B)]^{c}$ y $f^{-1}(\emptyset)= \emptyset$.
+		\item Si $\{ B_i, i \in I\}$ es una familia arbitraria de subconjuntos de $\Omega'$, entonces
+		\[
+		f^{-1} \Big( \bigcup_{i} B_i \Big) = \bigcup_{i} f^{-1}(B_i) \quad \text{y} \quad f^{-1} \Big( \bigcap_{i} B_i \Big) = \bigcap f^{-1} (B_i)
+		\]
+		\item Si $\mathcal{F}'$ es una $\sigma$-álgebra de $\Omega'$, entonces la familia
+		\[
+		f^{-1} (\mathcal{F} ') = \{ f^{-1} (B) | B \in \hspace{1mm} \mathclap{F}\hspace{1.5mm} '\}
+		\]
+		es una $\sigma$-álgebra de $\Omega$.
+	\end{enumerate}
+	
+	
+\end{enumerate}
+
+\end{document}

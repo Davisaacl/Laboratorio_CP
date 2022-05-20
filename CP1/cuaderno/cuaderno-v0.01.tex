@@ -1,0 +1,77 @@
+% ==============================================================================
+\documentclass[11pt]{article}
+% ==============================================================================
+
+% ++++++++++++++++++++++++++++++++++++++++++++++++
+\newcommand{\raiz}{../..}
+\usepackage{\raiz/tex/preambulo, \raiz/tex/definiciones}
+\newcommand{\home}{\raiz/CP1/}
+% ++++++++++++++++++++++++++++++++++++++++++++++++
+
+% ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+% ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+% ##########################################################
+\def\doctitle{Laboratorio}
+\def\topictitle{Cuaderno de Ejercicios}
+\def\theauthor{López, Linares y Barrios}
+\def\course{\textsc{Cálculo de Probabilidades I}}
+\def\period{versión \version}
+\def\version{0.01}
+% ##########################################################
+
+% ==============================================================================
+\begin{document}
+% ==============================================================================
+
+\title{\bf {
+		\huge Cálculo de Probabilidades I \\[1ex] 
+		\LARGE Cuaderno de Ejercicios \\[1ex]
+		\Large Laboratorio
+		} }
+\author{\large David López, Jordán Linares y Ernesto Barrios}
+\date{\today \\[1ex] \small Versión \version}
+
+\maketitle
+
+\tableofcontents
+
+\clearpage \newpage \
+
+\section*{Prefacio}
+\addcontentsline{toc}{section}{Prefacio}
+
+Hace dos años se iniciaron las sesiones de ejercicios que llaman \emph{laboratorios} de los cursos de Cálculo de Probabilidades I y II. Los encargados de los laboratorios fueron David I. López Romero y L. Jordán L. Linares Pérez, alternándose los cursos. Cada uno de ellos colectó los ejercicios para sus sesiones. Ahora hemos empezado a recuperar las respuestas de los ejercicios y resolveremos una selección de ellos. Este cuaderno es el resultado de ellos.
+
+\medskip
+
+\noindent Cualquier error que identifique, comentario y/o sugerencia serán bienvenido. Diríjalo a Ernesto Barrios\ \texttt{<ebarrios at itam.mx>}.
+
+\bigskip
+
+\begin{flushright}Ciudad de México, 2 de mayo de 2022 \end{flushright}
+
+\newpage 
+
+\input{\home/lab01/lab01Texto}
+
+% -----------------------------------------
+\addcontentsline{toc}{section}{Referencias}
+\bibliography{\raiz/ref/probabilidad}
+\bibliographystyle{chicago}
+% -----------------------------------------
+
+\clearpage \newpage \
+
+%%% Respuestas
+\renewcommand{\thesubsection}{\arabic{subsection}}
+\addcontentsline{toc}{section}{Respuestas}
+\section*{Respuestas}
+
+\renewcommand{\theenumi}{\thesubsection:\arabic{enumi}}
+%\settocdepth{section} \setcounter{subsection}{0}
+\input{\home/lab01/lab01Respuestas}
+
+% ==============================================================================
+\end{document}
+% ==============================================================================

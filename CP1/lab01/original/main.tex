@@ -1,0 +1,123 @@
+\documentclass[a4paper]{article}
+
+%% Language and font encodings
+%\usepackage{fontspec}
+
+%% Sets page size and margins
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+%% Useful packages
+\usepackage{amsmath,amsthm,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{bbm}
+
+\title{Laboratorio 1. Espacios de probabilidad}
+
+\author{Cálculo de Probabilidades I\\
+        Departamento de Estadística\\
+}
+
+\date{20/01/2021}
+
+\begin{document}
+\maketitle
+
+\section*{Ejercicios}
+
+\begin{enumerate}
+\item Una varilla de metal de longitud $l$ se rompe en dos puntos elegidos al azar ¿Cuál es la probabilidad de que los tres elementos así obtenidos formen un triángulo?
+
+\item Se escoge un número al azar dentro del intervalo $(-1,1)$ ¿Cuál es la probabilidad de que la ecuación cuadrática $ax^2 + x + 1 = 0$ tenga dos raíces reales?
+
+\item Un modelo de una ruleta puede construirse tomando un espacio de probabilidad uniforme sobre una circunferencia de radio $1$, de manera que la probabilidad de que el apuntador caiga en una arco de longitud $s$ es $s/2\pi$. Suponga que el círculo se divide en 37 zonas numeradas $1, 2, . . . , 37$. Calcule la probabilidad de que la ruleta caiga en una zona par.
+
+\item Suponga que se elige un punto al azar del cuadrado unitario. Sea A el evento que determinado por el triángulo formado por las líneas $y = 0, x = 1, x = y$, y sea $B$ el evento definido por el rectángulo de vértices $(0, 0), (1, 0), (1, 1/2), (0, 1/2)$. Calcule $P(A \cap B)$ y $P(A \cup B)$.
+
+\item Una caja tiene 10 bolas numeradas $1, 2, . . . , 10$. Una bola se elige al azar y una segunda bola se elige de las 9 restantes. Encuentre la probabilidad de que los númeross de las 2 bolas difiera en 2 o más.
+
+\item En un bosque hay 20 alces, de los cuales 5 fueron capturados, marcados y liberados. Cierto tiempo después, 4 de los 20 alces fueron capturados ¿Cuál es la probabilidad de que 2 de estos 4 alces hayan sido marcados anteriormente? ¿Qué supuesto está haciendo para sus cálculos?
+
+\item Suponga que un experimento se realiza n veces. Para cualquier evento $E$ del espacio muestral, sea $n(E)$ el número de veces que $E$ ocurre, y defina $f(E) = n(E)/n$. Muestre que f es una medida de probabilidad. (Es decir, satisface los Axiomas de la Probabilidad.)
+
+\item Si $P(E) = 0.9$ y $P(F) = 0.8$, muestre que $P(E \cap F ) \ge 0.7.$ En general, pruebe la \textit{desigualdad de Bonferroni}, 
+
+$$ \mathbbm{P}(E \cap F) \ge \mathbbm{P}(E) + \mathbbm{P}(F) - 1$$
+
+\item  Sea $(\Omega, S,\mathbbm{P})$ un espacio de probabilidad donde $S$ es una $\sigma$-algebra de subconjuntos de $\Omega$ y $\mathbbm{P}$ es una medida de probabilidad que asigna probabilidad $p(> 0)$ a cada uno de los puntos de $\Omega$.
+
+\begin{itemize}
+    \item Muestre que $\Omega$ debe tener un número finito de puntos. (\textbf{Sugerencia: muestre que $\Omega$ no puede tener más de $1/p$ puntos}.)
+    \item Muestre que si $n$ es el número de puntos de $\Omega$, entonces p debe ser $1/n$.
+\end{itemize}
+\end{enumerate}
+\newpage
+
+\section*{Soluciones}
+\begin{enumerate}
+    \item Este problema se resuelve a través del enfoque geométrico de la probabilidad. Empezamos definiendo el conjunto $\Omega = \{ (x,y): 0 < x, y < l \}.$
+    
+    Supongamos que $0 < x < y < l$, entonces la varilla de metal se puede dividir en tres segmentos: $x, y-x, l-y$. Con conocimientos previos de trigonometría, sabemos que se puede formar un triángulo syss 
+    
+    \[ x < (y-x)+(l-y) \Rightarrow x < l/2, \]
+    \[y-x < x+(l-y) \Rightarrow y < l/2 + x, \]
+    \[l-y < x + (y-x) \Rightarrow y > l/2 \]
+    
+    Graficando estas últimas desigualdades en un plano x-y, nos damos cuenta que, si $A$ es el evento de interés, entonces:
+    
+    \[ \mathbb{P}(A) = \frac{Area(A)}{Area(\Omega)} = \frac{1}{4}\]
+    
+    \item Sabemos que $ax^2 + x + 1 = 0$ tiene raíces reales si $1-4(a)(1) \ge 0 \Rightarrow a \le 1/4.$ Ahora bien, como $\Omega = (-1,1)$ y sea $A = \{ a \in \Omega: 1-4a \le 0 \} = (-1, 1/4]$ nuestro evento de interés. Por probabilidad clásica:
+    
+    \[ \mathbb{P}(A) = \frac{longitud(A)}{longitud(\Omega)} = \frac{5/4}{2} = \frac{5}{8}\]
+    
+    \item En primer lugar, definimos al evento $E$ como el evento cuando el apuntador cae en zona par, es decir $E = \{2,4,6,...,36\}.$ Por el enfoque de probabilidad clásica, podemos dividir casos favorables entre casos totales, luego: 
+    
+    \[ \mathbb{P}(E) = \frac{pares}{total} = \frac{18}{37}\]
+    
+    \item Graficando las línes en el cuadrado unitario, la solución resulta ser el área de interés vs el área total:
+    
+    \[\mathbb{P}(A \cap B) = \frac{1/4 + 1/8}{1} = 3/8\]
+    \[\mathbb{P}(A \cup B) = \mathbb{P}(A) + \mathbb{P}(B) - \mathbb{P}(A \cap B) = 1/2 + 1/2 - 3/8 = 5/8 \]\
+    
+    \item Sea E la probabilidad de que los números de las bolas difieran en 2 o más. Notamos que el número de casos totales es $| \Omega | = \binom{10}{1} \binom{9}{1}$. Para el caso del número de casos favorables, definamos una tupla de la forma $(x,y)$ donde $x$ es el número de la primera extracción, mientras que $y$ es el número de la segunda extracción. De esta forma, lo único que se tiene que hacer es fijar alguno de los dos números, y llenar aquellos que difieran en dos o más. Para el caso, por ejemplo, de $x = 1$, tenemos el siguiente conjunto:
+    
+    $$ \{(1,3),(1,4),...,(1,10)\}$$
+    
+    Repitiendo el ejercicio anterior para $i=1,...,10$ obtenemos que el número de casos favorables es $ | E | = 72.$ Por lo tanto, por probabilidad clásica, llegamos a que $P(E) = \frac{72}{10 \cdot 9}$
+
+    \item Es fácil ver que podemos dividir a nuestra población total de alces en dos subgrupos más pequeños: los alces marcados, y los no marcados. Ahora bien, definamos el evento $A$ como el número de alces marcados. Luego, nos interesa obtener la probabilidad de que suceda el evento $\{A = 2\}$. Por probabilidad clásica, obtenemos:
+    
+    $$ P(\{A = 2\}) = \frac{\binom{5}{2} \binom{15}{2}}{\binom{20}{4}}$$
+    
+    Vale la pena mencionar que este problema se puede resolver con ayuda de la distribución hipergeométrica. 
+    
+    \item Para este problema, debemos desarrollar los tres axiomas de Kolmogorov:
+    
+    \begin{enumerate}
+        \item $f(E)= \frac{n(E)}{n} \ge 0$. Ya que, si el experimento no ocurre, entonces $n(E)=0$; por otro lado, si el experimento ocurre, entonces $n(E) \ge 0.$
+        \item \[ f(\Omega) = f(E \cup E^c) = f(E) + f(E^c) = \frac{n(E)}{n} + \frac{1-n(E)}{n} = 1 \]
+        \item \[ f(\bigcup_{i=1}^\infty E_i) = \frac{n(\bigcup_{i=1}^\infty E_i)}{n} = \sum_{i=1}^\infty \frac{n(E_i)}{n} = \sum_{i=1}^\infty f(E_i) \]
+    \end{enumerate}
+    
+    \item Vamos a probar directamente la \textit{desigualdad de Bonferrioni}. Como $\mathbb{P}(E \cup F)$ es una medida de probabilidad, se cumple que $\mathbb{P}(E \cup F) \in (0,1),$
+    
+    \[ \Rightarrow \mathbb{P}(E) + \mathbb{P}(F) - \mathbb{P}(E \cap F) \le 1\]
+    \[ \Rightarrow \mathbb{P}(E \cap F) \ge \mathbb{P}(E) + \mathbb{P}(F) -1 \]
+    
+    \item Sea $\Omega = \{ \omega_1, \omega_2, ..., \omega_n\}$ con $\mathbb{P}(\{\omega_i\}) = p (>0)$ $i = 1,...,n.$ Por segundo axioma de Kolmogorov, sabemos que:
+    
+    \[ \mathbb{P}(\Omega) = \mathbb{P}(\{\omega_1,...,\omega_n \}) = \mathbb{P}(\cup_{i = 1}^n \{\omega_i\}) = \sum_{i=1}^n \mathbb{P}(\{ \omega_i\}) = n \cdot p = 1\,... \,(*)\]
+    
+    Si suponemos ahora que $|\Omega| > 1/p (= n)$
+    
+    \[\Rightarrow \lim_{n \to +\infty} \mathbb{P}(\Omega) = \lim_{n \to +\infty} n \cdot p \neq 1 !\]
+    
+    Lo cual es un absurdo. Por otro lado, para el segundo inciso, tomando en cuenta la igualdad (*), concluimos que $p = 1/n.$
+    
+    
+    
+\end{enumerate}
+
+\end{document}
